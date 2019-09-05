@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+}
