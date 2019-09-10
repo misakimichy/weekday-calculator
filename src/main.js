@@ -7,37 +7,50 @@ const convertToDay = (date) => {
   const year = date[0];
   // Date takes 0 - 11 as months so add condition to convert the input number into proper number
   let month = date[1];
-  if (month === "01") {
-    month = 0;
-  } else if (month === "02") {
-    month = 1;
-  } else if (month === "03") {
-    month = 2;
-  } else if (month === "04") {
-    month = 3;
-  } else if (month === "05") {
-    month = 4;
-  } else if (month === "06") {
-    month = 5;
-  } else if (month == "07") {
-    month = 6;
-  } else if (month === "08") {
-    month = 7;
-  } else if (month === "09") {
-    month = 8;
-  } else if (month === "10") {
-    month = 9;
-  } else if (month === "11") {
-    month = 10;
-  } else if (month === "02") {
-    month = 11;
+  switch (month) {
+    case "01" :
+      month = 0;
+      break;
+    case "02" :
+      month = 1;
+      break;
+    case "03" :
+      month = 2;
+      break;
+    case "04" :
+      month = 3;
+      break;
+    case "05" :
+      month = 4;
+      break;
+    case "06" :
+      month = 5;
+      break;
+    case "07" :
+      month = 6;
+      break;
+    case "08" :
+      month = 7;
+      break;
+    case "09" :
+      month = 8;
+      break;
+    case "10" :
+      month = 9;
+      break;
+    case "11" :
+      month = 10;
+      break;
+    case "12" :
+      month = 11;
+      break;
   }
   const day = date[2];
   const getDate = new Date(year, month, day);
 
   // getDay() - returns number 0 - 6 which is Sun - Sat
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay
-  let weekDay = getDate.getDay()
+  let weekDay = getDate.getDay();
   if (weekDay === 0) {
     weekDay = "Sunday";
   } else if (weekDay === 1) {
